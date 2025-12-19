@@ -1,0 +1,36 @@
+digraph AST {
+  node [shape=box, fontname="Arial", fontsize=10];
+  edge [fontname="Arial", fontsize=8];
+
+  node0 [label="Program", shape=ellipse, color=blue];
+  node1 [label="Assign\na"];
+  node2 [label="Number\n10.0"];
+  node1 -> node2;
+  node1 -> node2 [label="expr"];
+  node0 -> node1;
+  node0 -> node1 [label="stmt 0"];
+  node3 [label="If", shape=diamond];
+  node4 [label="BinaryOp\n>"];
+  node5 [label="Identifier\na"];
+  node4 -> node5;
+  node6 [label="Number\n5.0"];
+  node4 -> node6;
+  node4 -> node5 [label="left"];
+  node4 -> node6 [label="right"];
+  node3 -> node4;
+  node7 [label="Assign\nb"];
+  node8 [label="Number\n1.0"];
+  node7 -> node8;
+  node7 -> node8 [label="expr"];
+  node3 -> node7;
+  node9 [label="Assign\nb"];
+  node10 [label="Number\n0.0"];
+  node9 -> node10;
+  node9 -> node10 [label="expr"];
+  node3 -> node9;
+  node3 -> node4 [label="condition"];
+  node3 -> node7 [label="then"];
+  node3 -> node9 [label="else"];
+  node0 -> node3;
+  node0 -> node3 [label="stmt 1"];
+}

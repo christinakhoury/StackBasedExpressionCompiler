@@ -1,0 +1,15 @@
+digraph AST {
+  node [shape=box, fontname="Arial", fontsize=10];
+  edge [fontname="Arial", fontsize=8];
+
+  node0 [label="Assign\nx"];
+  node1 [label="BinaryOp\n+"];
+  node2 [label="Identifier\ny"];
+  node1 -> node2;
+  node3 [label="Number\n1.0"];
+  node1 -> node3;
+  node1 -> node2 [label="left"];
+  node1 -> node3 [label="right"];
+  node0 -> node1;
+  node0 -> node1 [label="expr"];
+}
