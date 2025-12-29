@@ -36,4 +36,4 @@ Optional features implemented include boolean expressions, conditional statement
 ---
 
 ## Contact
-GitHub: [christinakhoury](https://github.com/christinakhoury)
+- GitHub: [github.com/christinakhoury](https://github.com/christinakhoury)
